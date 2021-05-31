@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 
 import com.example.store.shopping.client.CustomerClient;
 import com.example.store.shopping.client.ProductClient;
+import com.example.store.shopping.entity.Customer;
 import com.example.store.shopping.entity.Invoice;
 import com.example.store.shopping.entity.InvoiceItem;
-import com.example.store.shopping.model.Customer;
-import com.example.store.shopping.model.Product;
+import com.example.store.shopping.entity.Product;
 import com.example.store.shopping.repository.InvoiceItemsRepository;
 import com.example.store.shopping.repository.InvoiceRepository;
 

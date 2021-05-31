@@ -21,7 +21,6 @@ import javax.validation.Valid;
 
 import org.springframework.data.annotation.Transient;
 
-import com.example.store.shopping.model.Customer;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;

@@ -3,10 +3,10 @@ server:
 
 spring:  cloud:
    config:      server:        git:          uri: https://github.com/StickCruz92/MicroserviceSpringBootSpringCloud.git
-          searchPath: config-data
+          searchPaths: config-data
           username: ${GIT_USER}
-          passwork: ${GIT_PASSWORD}
-   security: 
+          password: ${GIT_PASSWORD}
+  security: 
     user:    
      name: root
      password: secrect

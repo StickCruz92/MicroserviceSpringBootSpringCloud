@@ -48,6 +48,8 @@ public class Invoice {
     @Temporal(TemporalType.DATE)
     private Date createAt;
 
+
+
     @Valid
     @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -56,8 +58,8 @@ public class Invoice {
 
     private String state;
 
-    //@Transient
-    //private Customer customer;
+    @Transient
+    private Customer customer;
 
     public Invoice(){
         items = new ArrayList<>();

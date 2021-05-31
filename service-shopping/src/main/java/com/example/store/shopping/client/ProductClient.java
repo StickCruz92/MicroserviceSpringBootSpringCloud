@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.example.store.shopping.entity.Product;
+import com.example.store.shopping.model.Product;
 
 @FeignClient(name = "service-product")
 @RequestMapping(value = "/products")

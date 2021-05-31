@@ -5,6 +5,8 @@ import lombok.Data;
 import javax.persistence.*;
 import javax.validation.constraints.Positive;
 
+import com.example.store.shopping.model.Product;
+
 @Entity
 @Data
 @Table(name = "tbl_invoce_items")

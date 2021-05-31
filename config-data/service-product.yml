@@ -1,4 +1,9 @@
-server:  port: 8081  error:   include-message: always   #include-binding-errors: always      
+server:
+  port: 8081
+  error:
+   include-message: always
+   #include-binding-errors: always    
+  
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
@@ -13,7 +18,13 @@ spring:
         dialect: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
     
-logging:  pattern:    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEN_PATTERN:-%5p} %m%n"
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEN_PATTERN:-%5p} %m%n"
 
+eureka: 
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:8005/eureka/
 
 

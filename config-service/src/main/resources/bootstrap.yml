@@ -9,5 +9,5 @@ spring:  cloud:
   security: 
     user:    
      name: root
-     password: secrect
+     password: s3cr3t
  

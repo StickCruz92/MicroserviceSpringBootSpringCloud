@@ -3,6 +3,6 @@ spring:
   name: service-customer
  cloud: 
    config: 
-    uri: http://localhost:8085
+    uri: http://localhost:8084
     username: root
     password: s3cr3t

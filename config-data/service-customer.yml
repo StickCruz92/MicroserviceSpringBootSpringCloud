@@ -1,42 +1,27 @@
-#Application Configuration
 server:
   port: 8082
-
-# To See H2 Console in Browser:
-# http://localhost:8092/h2-console
-# Enabling H2 Console
+  error:
+   include-message: always
+   #include-binding-errors: always    
+  
 spring:
-  h2:
-    console:
-      enabled: true
-  # ===============================
-  # DB
-  # ===============================
   datasource:
-    url: jdbc:h2:mem:customerDB;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    driverClassName: org.h2.Driver
-    platform: h2
-    username: sa
-    password:
-
-  # ===============================
-  # JPA / HIBERNATE
-  # ===============================
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/exampledemostore?useSSL=false
+    username: root
+    password: 123456
   jpa:
-    show-sql: true
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.H2Dialect
     properties:
       hibernate:
-        show_sql: true
-        use_sql_comments: false
-        format_sql: false
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    
 logging:
   pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEN_PATTERN:-%5p} %m%n"
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8085/eureka/
-
+      defaultZone: http://localhost:8005/eureka/

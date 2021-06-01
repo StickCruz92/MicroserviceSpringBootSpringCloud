@@ -16,8 +16,7 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
-    show-sql: true
-    
+    show-sql: true 
 logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEN_PATTERN:-%5p} %m%n"
@@ -25,3 +24,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8085/eureka/
+Feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
